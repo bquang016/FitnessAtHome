@@ -18,45 +18,6 @@ function TabBarIcon(props: {
   );
 }
 
-// CẬP NHẬT HEADER NÀY
-function HomeScreenHeader() {
-  // Lấy thông số vùng an toàn (tránh tai thỏ, dynamic island)
-  const insets = useSafeAreaInsets();
-
-  return (
-    <View
-      style={[
-        styles.headerContainer,
-        // Tự động đẩy phần đệm phía trên bằng đúng chiều cao của tai thỏ + 10px khoảng cách
-        { paddingTop: insets.top + 10 },
-      ]}
-    >
-      <View style={styles.headerContent}>
-        {/* Nút quay lại */}
-        <MaterialCommunityIcons name="arrow-left" size={24} color="#121212" />
-
-        <View style={styles.headerRightGroup}>
-          {/* Nút Lịch */}
-          <View style={styles.iconCircle}>
-            <MaterialCommunityIcons
-              name="calendar-range-outline"
-              size={20}
-              color="#121212"
-            />
-          </View>
-
-          {/* Avatar */}
-          <MaterialCommunityIcons
-            name="account-circle"
-            size={40}
-            color="#121212"
-            style={styles.avatar}
-          />
-        </View>
-      </View>
-    </View>
-  );
-}
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -78,9 +39,7 @@ export default function TabLayout() {
           title: "Trang chủ", // Đã Việt hóa
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="home-variant-outline" color={color} />
-          ),
-          headerShown: true,
-          header: () => <HomeScreenHeader />,
+          )
         }}
       />
 

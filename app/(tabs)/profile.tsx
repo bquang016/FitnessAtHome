@@ -1,23 +1,48 @@
-// app/(tabs)/profile.tsx
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Switch, Image } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Switch, Image, Modal, TextInput, Alert, KeyboardAvoidingView, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useAppStore } from '../../store/useAppStore';
+import { THEME } from '../../constants/theme';
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
+  const { userProfile, setProfile } = useAppStore();
   
   // State quản lý cài đặt thông báo
   const [notifyDiet, setNotifyDiet] = useState(true);
   const [notifyWorkout, setNotifyWorkout] = useState(true);
 
-  // Dữ liệu tiến độ (Có thể dùng AsyncStorage để lưu sau này)
-  const currentWeight = 47; // Cân nặng hiện tại
-  const targetWeight = 56;  // Mục tiêu
-  const startWeight = 47;   // Cân nặng lúc bắt đầu
+  // Update weight state
+  const [isUpdateVisible, setIsUpdateVisible] = useState(false);
+  const [newWeight, setNewWeight] = useState('');
+
+  // Chỉ số cơ thể (editable) - load từ userProfile
+  const [armSize, setArmSize] = useState(String(userProfile?.armSize || ''));
+  const [chestSize, setChestSize] = useState(String(userProfile?.chestSize || ''));
+  const [thighSize, setThighSize] = useState(String(userProfile?.thighSize || ''));
+
+  // Dữ liệu tiến độ
+  const currentWeight = userProfile?.weight || 0; // Cân nặng hiện tại
+  const targetWeight = userProfile?.gender === 'male' ? currentWeight + 10 : currentWeight + 5;  // Mục tiêu giả định
+  const startWeight = currentWeight > 0 ? currentWeight - 2 : 0;   // Giả lập
   
   // Tính % hoàn thành
   const weightProgress = Math.max(0, Math.min(100, ((currentWeight - startWeight) / (targetWeight - startWeight)) * 100));
+
+  const handleUpdateWeight = () => {
+    const parsed = parseFloat(newWeight);
+    if (isNaN(parsed) || parsed <= 0) {
+      Alert.alert('Lỗi', 'Vui lòng nhập cân nặng hợp lệ!');
+      return;
+    }
+    if (userProfile) {
+      setProfile({ ...userProfile, weight: parsed });
+      setNewWeight('');
+      setIsUpdateVisible(false);
+      Alert.alert('Thành công', 'Đã cập nhật cân nặng và tính lại Macros mới!');
+    }
+  };
 
   return (
     <ScrollView 
@@ -64,7 +89,7 @@ export default function ProfileScreen() {
           <Text style={styles.progressLabelText}>Còn {targetWeight - currentWeight}kg nữa</Text>
         </View>
 
-        <TouchableOpacity style={styles.updateButton}>
+        <TouchableOpacity style={styles.updateButton} onPress={() => setIsUpdateVisible(true)}>
           <Text style={styles.updateButtonText}>CẬP NHẬT CÂN NẶNG</Text>
         </TouchableOpacity>
       </View>
@@ -76,17 +101,44 @@ export default function ProfileScreen() {
           <View style={styles.measureBox}>
             <MaterialCommunityIcons name="arm-flex" size={24} color="#121212" />
             <Text style={styles.measureName}>Bắp tay</Text>
-            <Text style={styles.measureValue}>28.5</Text>
+            <TextInput
+              style={styles.measureInput}
+              keyboardType="numeric"
+              placeholder="--"
+              value={armSize}
+              onChangeText={setArmSize}
+              onBlur={() => {
+                if (userProfile && armSize) setProfile({ ...userProfile, armSize: parseFloat(armSize) || 0 } as any);
+              }}
+            />
           </View>
           <View style={styles.measureBox}>
             <MaterialCommunityIcons name="human-male" size={24} color="#121212" />
             <Text style={styles.measureName}>Vòng ngực</Text>
-            <Text style={styles.measureValue}>85.0</Text>
+            <TextInput
+              style={styles.measureInput}
+              keyboardType="numeric"
+              placeholder="--"
+              value={chestSize}
+              onChangeText={setChestSize}
+              onBlur={() => {
+                if (userProfile && chestSize) setProfile({ ...userProfile, chestSize: parseFloat(chestSize) || 0 } as any);
+              }}
+            />
           </View>
           <View style={styles.measureBox}>
             <MaterialCommunityIcons name="run" size={24} color="#121212" />
             <Text style={styles.measureName}>Vòng đùi</Text>
-            <Text style={styles.measureValue}>48.0</Text>
+            <TextInput
+              style={styles.measureInput}
+              keyboardType="numeric"
+              placeholder="--"
+              value={thighSize}
+              onChangeText={setThighSize}
+              onBlur={() => {
+                if (userProfile && thighSize) setProfile({ ...userProfile, thighSize: parseFloat(thighSize) || 0 } as any);
+              }}
+            />
           </View>
         </View>
       </View>
@@ -123,6 +175,34 @@ export default function ProfileScreen() {
         </View>
       </View>
 
+
+      {/* WEIGHT UPDATE MODAL */}
+      <Modal visible={isUpdateVisible} transparent animationType="fade">
+        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Nhập cân nặng mới</Text>
+            <Text style={styles.modalDesc}>Hệ thống sẽ tự động cấu hình lại kế hoạch Macros mới nhất dành riêng cho bạn sau khi cập nhật.</Text>
+            
+            <TextInput
+              style={styles.modalInput}
+              keyboardType="numeric"
+              placeholder="Ví dụ: 62"
+              value={newWeight}
+              onChangeText={setNewWeight}
+              autoFocus
+            />
+
+            <View style={styles.modalActions}>
+              <TouchableOpacity style={styles.modalCancel} onPress={() => setIsUpdateVisible(false)}>
+                <Text style={styles.modalCancelText}>HỦY</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.modalSave} onPress={handleUpdateWeight}>
+                <Text style={styles.modalSaveText}>LƯU & XỬ LÝ</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </KeyboardAvoidingView>
+      </Modal>
     </ScrollView>
   );
 }
@@ -161,6 +241,7 @@ const styles = StyleSheet.create({
   measureBox: { flex: 1, backgroundColor: '#F5F5F7', padding: 15, borderRadius: 16, alignItems: 'center' },
   measureName: { color: '#8E8E93', fontSize: 13, marginTop: 8, marginBottom: 4 },
   measureValue: { color: '#121212', fontSize: 18, fontWeight: '700' },
+  measureInput: { color: '#121212', fontSize: 18, fontWeight: '700', textAlign: 'center', borderBottomWidth: 1, borderBottomColor: '#D1D1D6', paddingVertical: 4, minWidth: 50 },
 
   // Settings
   settingsCard: { backgroundColor: '#F5F5F7', borderRadius: 16, paddingHorizontal: 20 },
@@ -168,4 +249,16 @@ const styles = StyleSheet.create({
   settingInfo: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   settingText: { fontSize: 15, fontWeight: '500', color: '#121212' },
   divider: { height: 1, backgroundColor: '#E5E5EA' },
+
+  // Modal
+  modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', alignItems: 'center', padding: 20 },
+  modalContent: { backgroundColor: '#FFFFFF', borderRadius: 24, padding: 25, width: '100%', maxWidth: 400 },
+  modalTitle: { fontSize: 20, fontWeight: '700', color: '#121212', marginBottom: 10 },
+  modalDesc: { fontSize: 14, color: '#8E8E93', marginBottom: 20, lineHeight: 20 },
+  modalInput: { backgroundColor: '#F5F5F7', borderRadius: 12, padding: 15, fontSize: 20, fontWeight: '700', textAlign: 'center', color: '#121212', marginBottom: 25 },
+  modalActions: { flexDirection: 'row', gap: 10 },
+  modalCancel: { flex: 1, backgroundColor: '#F5F5F7', padding: 15, borderRadius: 12, alignItems: 'center' },
+  modalCancelText: { color: '#8E8E93', fontWeight: '700', fontSize: 14 },
+  modalSave: { flex: 1, backgroundColor: THEME.colors.primary, padding: 15, borderRadius: 12, alignItems: 'center' },
+  modalSaveText: { color: THEME.colors.white, fontWeight: '700', fontSize: 14 },
 });

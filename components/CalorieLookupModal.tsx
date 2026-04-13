@@ -3,28 +3,7 @@ import { Modal, View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, P
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const mockFoods = [
-  { id: 'f1', name: 'Phở bò béo', kcal: 450, protein: 30, carb: 50, fat: 15, unit: '1 bát' },
-  { id: 'f2', name: 'Sinh tố bơ', kcal: 350, protein: 3, carb: 30, fat: 20, unit: '1 cốc' },
-  { id: 'f3', name: 'Cơm sườn nướng', kcal: 600, protein: 35, carb: 70, fat: 20, unit: '1 đĩa' },
-  { id: 'f4', name: 'Bánh mì chảo', kcal: 550, protein: 25, carb: 45, fat: 30, unit: '1 suất' },
-  { id: 'f5', name: 'Chè đậu đen', kcal: 250, protein: 5, carb: 50, fat: 2, unit: '1 cốc' },
-  { id: 'f6', name: 'Xôi mặn', kcal: 500, protein: 15, carb: 65, fat: 20, unit: '1 hộp' },
-  { id: 'f7', name: 'Bánh cuốn', kcal: 300, protein: 12, carb: 45, fat: 8, unit: '1 đĩa' },
-  { id: 'f8', name: 'Bún bò Huế', kcal: 500, protein: 35, carb: 60, fat: 15, unit: '1 bát' },
-  { id: 'f9', name: 'Bún chả', kcal: 550, protein: 25, carb: 65, fat: 22, unit: '1 suất' },
-  { id: 'f10', name: 'Bánh bèo', kcal: 150, protein: 5, carb: 30, fat: 3, unit: '1 chén' },
-  { id: 'f11', name: 'Bánh xèo', kcal: 450, protein: 15, carb: 35, fat: 25, unit: '1 cái' },
-  { id: 'f12', name: 'Cơm chiên', kcal: 650, protein: 20, carb: 80, fat: 25, unit: '1 đĩa' },
-  { id: 'f13', name: 'Gỏi cuốn', kcal: 60, protein: 4, carb: 10, fat: 1, unit: '1 cuốn' },
-  { id: 'f14', name: 'Bún riêu', kcal: 400, protein: 20, carb: 55, fat: 12, unit: '1 bát' },
-  { id: 'f15', name: 'Bánh giò', kcal: 300, protein: 10, carb: 25, fat: 18, unit: '1 cái' },
-  { id: 'f16', name: 'Mì quảng', kcal: 450, protein: 25, carb: 55, fat: 14, unit: '1 bát' },
-  { id: 'f17', name: 'Bò bít tết', kcal: 700, protein: 40, carb: 60, fat: 30, unit: '1 phần' },
-  { id: 'f18', name: 'Hủ tiếu', kcal: 450, protein: 28, carb: 55, fat: 12, unit: '1 bát' },
-  { id: 'f19', name: 'Sữa tươi', kcal: 150, protein: 8, carb: 12, fat: 8, unit: '1 hộp' },
-  { id: 'f20', name: 'Trứng luộc', kcal: 70, protein: 6, carb: 1, fat: 5, unit: '1 quả' },
-];
+import mockFoods from '../data/vietnamese_foods.json';
 
 interface Props {
   visible: boolean;

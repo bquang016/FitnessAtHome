@@ -3,28 +3,14 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useAppStore } from '../store/useAppStore';
 
 export default function CalendarScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const [streakHistory, setStreakHistory] = useState<string[]>([]);
-  const [streakCount, setStreakCount] = useState(0);
-
-  useEffect(() => {
-    const loadStreakData = async () => {
-      try {
-        const STREAK_DATA_KEY = '@streak_data';
-        const streakStr = await AsyncStorage.getItem(STREAK_DATA_KEY);
-        if (streakStr) {
-          const streakData = JSON.parse(streakStr);
-          setStreakHistory(streakData.history || []);
-          setStreakCount(streakData.count || 0);
-        }
-      } catch (e) {}
-    };
-    loadStreakData();
-  }, []);
+  const { streak } = useAppStore();
+  const streakHistory = streak.history || [];
+  const streakCount = streak.count || 0;
 
   const today = new Date();
   const year = today.getFullYear();

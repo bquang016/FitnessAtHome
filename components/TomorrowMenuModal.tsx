@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import dayjs from 'dayjs';
+import { LogService } from '../services/LogService';
 import CalorieLookupModal from './CalorieLookupModal';
+import CustomAlert from './CustomAlert';
+import { THEME } from '../constants/theme';
 
 const defaultMealSlots = [
   { id: 1, time: '07:00', title: 'Bữa sáng', icon: 'bowl-mix', foods: [{fId: 1, name: 'Phở bò béo', kcal: 450}] },
@@ -19,25 +22,25 @@ interface Props {
 }
 
 export default function TomorrowMenuModal({ visible, onClose }: Props) {
-  const [slots, setSlots] = useState<any[]>([]);
+  const [slots, setSlots] = useState<any[]>(JSON.parse(JSON.stringify(defaultMealSlots)));
   const [lookupVisible, setLookupVisible] = useState(false);
   const [activeSlotId, setActiveSlotId] = useState<number | null>(null);
+  
+  const [alertState, setAlertState] = useState({ 
+    visible: false, title: '', message: '', type: 'success', dataPayload: null as any 
+  });
 
   useEffect(() => {
     if (visible) loadSchedule();
   }, [visible]);
 
-  const getTomorrowDateStr = () => {
-    const d = new Date(); d.setDate(d.getDate() + 1);
-    return d.toISOString().split('T')[0];
-  };
+  const getTomorrowDateStr = () => dayjs().add(1, 'day').format('YYYY-MM-DD');
 
   const loadSchedule = async () => {
     try {
-      const saved = await AsyncStorage.getItem(`@custom_schedule_${getTomorrowDateStr()}`);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        const mapped = parsed.map((p: any) => ({
+      const savedData = await LogService.getCustomSchedule(getTomorrowDateStr());
+      if (savedData) {
+        const mapped = savedData.map((p: any) => ({
           id: p.id,
           time: p.time,
           title: p.title,
@@ -93,12 +96,41 @@ export default function TomorrowMenuModal({ visible, onClose }: Props) {
     });
 
     if (hasEmptySlot) {
-      Alert.alert("Lưu ý", "Có bữa bạn chưa chọn món nào. Lịch trình sẽ ghi nhận là Chưa chọn món.");
+      setAlertState({
+        visible: true,
+        title: "Xác nhận lịch trình",
+        message: "Bạn có bữa ăn chưa chọn món nào. Lịch trình này sẽ ghi nhận là 'Chưa chọn món'. Bạn có chắc chắn muốn lưu?",
+        type: "confirm_save",
+        dataPayload: finalData
+      });
+      return;
     }
     
-    await AsyncStorage.setItem(`@custom_schedule_${getTomorrowDateStr()}`, JSON.stringify(finalData));
-    Alert.alert("Thành công", "Đã chốt thực đơn cho ngày mai!");
-    onClose();
+    executeSave(finalData);
+  };
+
+  const executeSave = async (data: any) => {
+    await LogService.saveCustomSchedule(getTomorrowDateStr(), data);
+    setAlertState({ 
+      visible: true, 
+      title: "Thành công", 
+      message: "Đã chốt thực đơn cho ngày mai!", 
+      type: "success", 
+      dataPayload: null 
+    });
+  };
+
+  const handleAlertConfirm = () => {
+    if (alertState.type === 'confirm_save') {
+      const data = alertState.dataPayload;
+      setAlertState({ ...alertState, visible: false });
+      setTimeout(() => executeSave(data), 300);
+    } else if (alertState.type === 'success') {
+      setAlertState({ ...alertState, visible: false });
+      onClose();
+    } else {
+      setAlertState({ ...alertState, visible: false });
+    }
   };
 
   let totalKcal = 0;
@@ -110,7 +142,7 @@ export default function TomorrowMenuModal({ visible, onClose }: Props) {
         <View style={styles.header}>
           <Text style={styles.title}>Thiết Kế Thực Đơn Ngày Mai</Text>
           <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-            <MaterialCommunityIcons name="close" size={24} color="#121212" />
+            <MaterialCommunityIcons name="close" size={24} color={THEME.colors.textMain} />
           </TouchableOpacity>
         </View>
 
@@ -121,8 +153,8 @@ export default function TomorrowMenuModal({ visible, onClose }: Props) {
               <View key={slot.id} style={styles.slotCard}>
                 <View style={styles.slotHeader}>
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                     <MaterialCommunityIcons name={slot.icon} size={22} color="#121212" />
-                     <Text style={styles.slotTitle}>{slot.title} <Text style={{fontSize: 14, color:'#8E8E93', fontWeight: '400'}}>({slot.time})</Text></Text>
+                     <MaterialCommunityIcons name={slot.icon} size={22} color={THEME.colors.textMain} />
+                     <Text style={styles.slotTitle}>{slot.title} <Text style={{fontSize: 14, color:THEME.colors.textSub, fontWeight: '400'}}>({slot.time})</Text></Text>
                   </View>
                   <Text style={styles.slotKcal}>{slotKcal} Kcal</Text>
                 </View>
@@ -133,14 +165,14 @@ export default function TomorrowMenuModal({ visible, onClose }: Props) {
                     <View style={{flexDirection:'row', alignItems:'center'}}>
                       <Text style={styles.foodKcal}>{food.kcal}</Text>
                       <TouchableOpacity onPress={() => handleRemoveFood(slot.id, food.fId)} style={styles.removeBtn}>
-                        <MaterialCommunityIcons name="close-circle" size={20} color="#FF453A" />
+                        <MaterialCommunityIcons name="close-circle" size={20} color={THEME.colors.textSub} />
                       </TouchableOpacity>
                     </View>
                   </View>
                 ))}
 
                 <TouchableOpacity style={styles.addBtn} onPress={() => openLookup(slot.id)}>
-                   <MaterialCommunityIcons name="plus" size={20} color="#33D1C1" />
+                   <MaterialCommunityIcons name="plus" size={20} color={THEME.colors.primary} />
                    <Text style={styles.addBtnText}>Thêm món vào {slot.title}</Text>
                 </TouchableOpacity>
               </View>
@@ -166,36 +198,44 @@ export default function TomorrowMenuModal({ visible, onClose }: Props) {
       </View>
 
       <CalorieLookupModal visible={lookupVisible} onClose={() => setLookupVisible(false)} onAddFood={handleAddFoodToSlot} />
+      
+      <CustomAlert 
+        visible={alertState.visible}
+        title={alertState.title}
+        message={alertState.message}
+        onConfirm={handleAlertConfirm}
+        onCancel={alertState.type === 'confirm_save' ? () => setAlertState({ ...alertState, visible: false }) : undefined}
+      />
     </Modal>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#FFFFFF', paddingTop: 50 },
+  container: { flex: 1, backgroundColor: THEME.colors.white, paddingTop: 50 },
   header: { flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginBottom: 15, alignItems: 'center' },
-  title: { fontSize: 22, fontWeight: '700', color: '#121212' },
-  closeBtn: { padding: 5, backgroundColor: '#F5F5F7', borderRadius: 20 },
+  title: { fontSize: 22, fontWeight: '700', color: THEME.colors.textMain },
+  closeBtn: { padding: 5, backgroundColor: THEME.colors.bgCard, borderRadius: 20 },
   list: { paddingHorizontal: 20 },
   
-  slotCard: { backgroundColor: '#F5F5F7', padding: 15, borderRadius: 16, marginBottom: 15, borderWidth: 1, borderColor: '#E5E5EA' },
+  slotCard: { backgroundColor: THEME.colors.bgCard, padding: 15, borderRadius: THEME.radius.small, marginBottom: 15 },
   slotHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderBottomColor: '#E5E5EA', paddingBottom: 10 },
-  slotTitle: { fontSize: 16, fontWeight: '700', color: '#121212', marginLeft: 8 },
-  slotKcal: { fontSize: 15, fontWeight: '700', color: '#FFB870' },
+  slotTitle: { fontSize: 16, fontWeight: '700', color: THEME.colors.textMain, marginLeft: 8 },
+  slotKcal: { fontSize: 15, fontWeight: '700', color: THEME.colors.accent },
   
   foodRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 5 },
-  foodName: { fontSize: 14, color: '#121212', flex: 1 },
-  foodKcal: { fontSize: 14, color: '#8E8E93', marginRight: 10 },
+  foodName: { fontSize: 14, color: THEME.colors.textMain, flex: 1 },
+  foodKcal: { fontSize: 14, color: THEME.colors.textSub, marginRight: 10 },
   removeBtn: { padding: 5 },
   
   addBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 10, backgroundColor: '#E0F7FA', borderRadius: 12, marginTop: 10 },
   addBtnText: { marginLeft: 5, fontSize: 14, fontWeight: '600', color: '#00796B' },
   
-  footer: { padding: 20, backgroundColor: '#FFFFFF', borderTopWidth: 1, borderTopColor: '#F5F5F7', shadowColor: '#000', shadowOffset: { width:0, height:-5}, shadowOpacity: 0.05, shadowRadius: 10, elevation: 10 },
-  warningBanner: { backgroundColor: '#FFF0F0', padding: 15, borderRadius: 12, marginBottom: 15 },
-  warningText: { color: '#FF453A', fontWeight: '600', fontSize: 13, lineHeight: 20 },
-  successBanner: { backgroundColor: '#E0F7FA', padding: 15, borderRadius: 12, marginBottom: 15 },
-  successText: { color: '#00796B', fontWeight: '700', fontSize: 14, textAlign: 'center' },
+  footer: { padding: 20, backgroundColor: THEME.colors.white, borderTopWidth: 1, borderTopColor: THEME.colors.bgCard, shadowColor: '#000', shadowOffset: { width:0, height:-5}, shadowOpacity: 0.05, shadowRadius: 10, elevation: 10 },
+  warningBanner: { backgroundColor: THEME.colors.bgCard, padding: 15, borderRadius: 12, marginBottom: 15 },
+  warningText: { color: THEME.colors.textSub, fontWeight: '600', fontSize: 13, lineHeight: 20 },
+  successBanner: { backgroundColor: THEME.colors.primary, padding: 15, borderRadius: 12, marginBottom: 15, opacity: 0.2 },
+  successText: { color: THEME.colors.primary, fontWeight: '700', fontSize: 14, textAlign: 'center' },
   
-  saveBtn: { backgroundColor: '#121212', padding: 16, borderRadius: 16, alignItems: 'center' },
-  saveBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700', letterSpacing: 1 }
+  saveBtn: { backgroundColor: THEME.colors.textMain, padding: 16, borderRadius: THEME.radius.small, alignItems: 'center' },
+  saveBtnText: { color: THEME.colors.white, fontSize: 16, fontWeight: '700', letterSpacing: 1 }
 });

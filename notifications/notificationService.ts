@@ -5,9 +5,10 @@ import { Platform } from 'react-native';
 // Cấu hình để thông báo hiện pop-up ngay cả khi đang mở app
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowAlert: true,
     shouldPlaySound: true,
     shouldSetBadge: false,
+    shouldShowBanner: true,
+    shouldShowList: true,
   }),
 });
 
@@ -60,11 +61,11 @@ export async function setupDailyReminders() {
       },
       // ĐÃ FIX LỖI TRIGGER TẠI ĐÂY
       trigger: {
-        type: 'daily',         // Bắt buộc ở SDK mới để lặp lại mỗi ngày
-        channelId: 'default',  // Bắt buộc để nhận diện kênh thông báo
         hour: item.hour,
         minute: item.minute,
-      },
+        repeats: true,
+        channelId: 'default',
+      } as any,
     });
   }
   console.log("Đã cài đặt xong 9 mốc báo thức hàng ngày!");

@@ -24,6 +24,7 @@ export const Colors = {
     tint: tintColorLight,
     tabIconDefault: '#8e8e93', // Màu icon tab không active
     tabIconSelected: tintColorDark, // Màu icon tab được chọn
+    icon: '#8e8e93',
   },
   dark: {
     text: '#fff',
@@ -31,5 +32,6 @@ export const Colors = {
     tint: tintColorDark,
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorDark,
+    icon: '#ccc',
   },
 };

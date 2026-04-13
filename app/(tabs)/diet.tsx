@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // THÊM THƯ VIỆN LƯU TRỮ
+import { useAppStore } from '../../store/useAppStore';
 import CalorieLookupModal from '../../components/CalorieLookupModal';
 import TomorrowMenuModal from '../../components/TomorrowMenuModal';
 
@@ -18,66 +18,14 @@ const dailyMeals = [
 
 export default function DietScreen() {
   const insets = useSafeAreaInsets();
-  const [completedMeals, setCompletedMeals] = useState<number[]>([]);
-  const [extraFoodsKcal, setExtraFoodsKcal] = useState<number>(0);
+  const { completedMeals, extraFoodsKcal, toggleMeal, addExtraKcal } = useAppStore();
   const [isLookupVisible, setIsLookupVisible] = useState(false);
   const [isTomorrowVisible, setIsTomorrowVisible] = useState(false);
 
-  // Tạo một key lưu trữ riêng cho ngày hôm nay (VD: @meals_2024-05-20)
-  // Việc này giúp app tự động reset danh sách ăn uống khi bước sang ngày mới!
-  const todayDate = new Date().toISOString().split('T')[0];
-  const STORAGE_KEY = `@meals_${todayDate}`;
-  const EXTRA_KCAL_KEY = `@extra_kcal_${todayDate}`;
-
-  // TẢI DỮ LIỆU KHI MỞ APP
-  useEffect(() => {
-    const loadSavedData = async () => {
-      try {
-        const savedData = await AsyncStorage.getItem(STORAGE_KEY);
-        if (savedData !== null) {
-          setCompletedMeals(JSON.parse(savedData));
-        }
-
-        const extraData = await AsyncStorage.getItem(EXTRA_KCAL_KEY);
-        if (extraData !== null) {
-          setExtraFoodsKcal(Number(extraData));
-        }
-      } catch (error) {
-        console.log("Lỗi khi tải dữ liệu:", error);
-      }
-    };
-    loadSavedData();
-  }, []);
-  // HÀM XỬ LÝ KHI TICK VÀO BỮA ĂN (Cập nhật UI + Lưu vào điện thoại)
-  const toggleMeal = async (id: number) => {
-    let newCompletedMeals;
-    
-    if (completedMeals.includes(id)) {
-      newCompletedMeals = completedMeals.filter(mealId => mealId !== id);
-    } else {
-      newCompletedMeals = [...completedMeals, id];
-    }
-
-    // Cập nhật giao diện ngay lập tức
-    setCompletedMeals(newCompletedMeals);
-
-    // Lưu ngầm vào bộ nhớ điện thoại
-    try {
-      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newCompletedMeals));
-    } catch (error) {
-      console.log("Lỗi khi lưu dữ liệu:", error);
-    }
+  const handleAddExtraFood = (kcal: number) => {
+    addExtraKcal(kcal);
   };
 
-  const handleAddExtraFood = async (kcal: number) => {
-    const newKcal = extraFoodsKcal + kcal;
-    setExtraFoodsKcal(newKcal);
-    try {
-      await AsyncStorage.setItem(EXTRA_KCAL_KEY, newKcal.toString());
-    } catch (error) {
-      console.log("Lỗi lưu extra kcal:", error);
-    }
-  };
 
   const baseConsumedKcal = dailyMeals
     .filter(meal => completedMeals.includes(meal.id))

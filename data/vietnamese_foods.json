@@ -1,0 +1,1838 @@
+[
+    {
+        "id": "7972c363-473a-49fa-b0f4-4bff07d0e76d",
+        "name": "Xôi xéo",
+        "kcal": 450,
+        "protein": 10,
+        "carb": 70,
+        "fat": 15,
+        "unit": "1 gói"
+    },
+    {
+        "id": "61f7eb3b-7cac-44a0-aad3-bbef715f4cf4",
+        "name": "Xôi gấc",
+        "kcal": 400,
+        "protein": 8,
+        "carb": 65,
+        "fat": 12,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "c362738d-7be3-4fb6-a26f-04dd15fea780",
+        "name": "Xôi mặn (thập cẩm)",
+        "kcal": 550,
+        "protein": 18,
+        "carb": 65,
+        "fat": 20,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "24e59f0d-e951-4157-8159-65e8483dcd42",
+        "name": "Xôi gà xé",
+        "kcal": 500,
+        "protein": 20,
+        "carb": 60,
+        "fat": 18,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "6d6e6ae2-0627-482c-ab50-e47ddd7c8e53",
+        "name": "Xôi sầu riêng",
+        "kcal": 480,
+        "protein": 6,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "f27747b5-ecc9-4b92-96a6-4b9bc6639052",
+        "name": "Xôi đỗ đen",
+        "kcal": 380,
+        "protein": 10,
+        "carb": 65,
+        "fat": 8,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "4d3a4d44-3909-4123-bccf-23941ea7e8df",
+        "name": "Xôi lá nếp",
+        "kcal": 350,
+        "protein": 6,
+        "carb": 65,
+        "fat": 5,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "80cd2820-ac5e-4de3-a6ad-3d90255dc951",
+        "name": "Xôi vò",
+        "kcal": 420,
+        "protein": 8,
+        "carb": 68,
+        "fat": 12,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "d935219b-0595-4cb1-bfdc-d83813b255c5",
+        "name": "Xôi lạp xưởng",
+        "kcal": 520,
+        "protein": 15,
+        "carb": 60,
+        "fat": 22,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "7f2af604-3e2f-4488-b2de-7d25ca300ef7",
+        "name": "Xôi thịt kho trứng",
+        "kcal": 650,
+        "protein": 25,
+        "carb": 70,
+        "fat": 30,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "42e4495c-aa62-4400-9c6b-4c283a5ecea3",
+        "name": "Xôi bắp",
+        "kcal": 390,
+        "protein": 8,
+        "carb": 65,
+        "fat": 10,
+        "unit": "1 gói"
+    },
+    {
+        "id": "995f45af-6dfa-4027-9649-629771d1a94d",
+        "name": "Xôi sắn",
+        "kcal": 410,
+        "protein": 6,
+        "carb": 70,
+        "fat": 10,
+        "unit": "1 gói"
+    },
+    {
+        "id": "016c709d-df4e-4561-8c01-0c51d5ed43d7",
+        "name": "Xôi xíu mại",
+        "kcal": 480,
+        "protein": 15,
+        "carb": 65,
+        "fat": 18,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "559ede1e-f059-4040-b673-6a1503e00366",
+        "name": "Xôi pate",
+        "kcal": 460,
+        "protein": 12,
+        "carb": 60,
+        "fat": 20,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "34c0d02b-c3af-44b9-a5bf-8be68871e6ce",
+        "name": "Xôi chiên chà bông",
+        "kcal": 350,
+        "protein": 10,
+        "carb": 45,
+        "fat": 15,
+        "unit": "1 cái"
+    },
+    {
+        "id": "878fd25b-766e-467e-ac67-189aea65d0c6",
+        "name": "Xôi cốm",
+        "kcal": 320,
+        "protein": 6,
+        "carb": 60,
+        "fat": 5,
+        "unit": "1 gói"
+    },
+    {
+        "id": "6ba5c6aa-0781-4c68-b244-ebf6e5fa02fb",
+        "name": "Xôi lạc",
+        "kcal": 430,
+        "protein": 12,
+        "carb": 60,
+        "fat": 16,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "840ca5fd-18a5-4eeb-b432-bf3f5117721e",
+        "name": "Xôi chim",
+        "kcal": 550,
+        "protein": 22,
+        "carb": 65,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "d6c61992-7541-49a7-9b09-26dab8d1be64",
+        "name": "Xôi sườn sụn",
+        "kcal": 600,
+        "protein": 25,
+        "carb": 65,
+        "fat": 25,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "c9378262-5521-498f-a12f-be8287d8f5b0",
+        "name": "Xôi trứng muối",
+        "kcal": 470,
+        "protein": 15,
+        "carb": 60,
+        "fat": 18,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "b70ea678-1b4a-48f3-a201-92b3ddea10af",
+        "name": "Cơm tấm sườn bì",
+        "kcal": 650,
+        "protein": 28,
+        "carb": 75,
+        "fat": 25,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "7a254615-7974-4dd3-88d4-afd71ddb5d0e",
+        "name": "Cơm tấm sườn chả",
+        "kcal": 680,
+        "protein": 30,
+        "carb": 75,
+        "fat": 28,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "4c5c7931-7553-4566-bc9b-5fd795aa5c26",
+        "name": "Cơm tấm sườn trứng",
+        "kcal": 670,
+        "protein": 32,
+        "carb": 75,
+        "fat": 26,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "b535acbb-5b67-4db7-9a71-765bc9d585b6",
+        "name": "Cơm tấm sườn bì chả trứng",
+        "kcal": 850,
+        "protein": 40,
+        "carb": 80,
+        "fat": 38,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "40944024-82b0-4135-a689-acaa4e1fbd23",
+        "name": "Cơm tấm thịt ba chỉ nướng",
+        "kcal": 700,
+        "protein": 25,
+        "carb": 75,
+        "fat": 35,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "12dc0f61-6b95-45b1-8798-093c5188d868",
+        "name": "Cơm tấm gà nướng",
+        "kcal": 650,
+        "protein": 35,
+        "carb": 70,
+        "fat": 22,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "31899699-da5d-4ab9-b59d-d918f9f17bb2",
+        "name": "Cơm gà Hải Nam",
+        "kcal": 550,
+        "protein": 28,
+        "carb": 65,
+        "fat": 18,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "577c07f0-1963-4717-91c5-f32f09f849cd",
+        "name": "Cơm chiên Dương Châu",
+        "kcal": 600,
+        "protein": 20,
+        "carb": 75,
+        "fat": 22,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "bc70c159-668a-4c19-9404-8c176a19d6fa",
+        "name": "Cơm chiên hải sản",
+        "kcal": 580,
+        "protein": 25,
+        "carb": 70,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "c0a60a14-98cb-4a46-aec3-4eba9100f117",
+        "name": "Cơm chiên cá mặn",
+        "kcal": 550,
+        "protein": 22,
+        "carb": 70,
+        "fat": 18,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "03be5ccb-0c2e-4ef2-87f6-472373e3e0df",
+        "name": "Cơm chiên dưa bò",
+        "kcal": 620,
+        "protein": 28,
+        "carb": 68,
+        "fat": 25,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "6b924311-3f7b-4b6e-a94b-fdf4a8c386f9",
+        "name": "Cơm rang dưa lê",
+        "kcal": 500,
+        "protein": 15,
+        "carb": 70,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "69cd04e3-0885-4e5a-af0a-c73691b82ea7",
+        "name": "Cơm thố đùi gà nướng",
+        "kcal": 750,
+        "protein": 38,
+        "carb": 80,
+        "fat": 28,
+        "unit": "1 thố"
+    },
+    {
+        "id": "91ca362a-ed41-40ac-82f9-085ce93ff4b2",
+        "name": "Cơm thịt kho tàu",
+        "kcal": 680,
+        "protein": 25,
+        "carb": 75,
+        "fat": 30,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "3b2103ae-3bff-435b-b8a1-482d4bdfa52a",
+        "name": "Cơm sườn xào chua ngọt",
+        "kcal": 640,
+        "protein": 22,
+        "carb": 80,
+        "fat": 25,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "b2380243-b243-4af0-b806-22e0a4c90702",
+        "name": "Cơm cá kho tộ",
+        "kcal": 520,
+        "protein": 20,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "7c7a343e-6d51-41d3-b6b3-9ac3f84a73fb",
+        "name": "Cơm gà xối mỡ",
+        "kcal": 800,
+        "protein": 35,
+        "carb": 70,
+        "fat": 40,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "9b292adc-be9e-404e-a70f-61a075eb4e4f",
+        "name": "Cơm bò lúc lắc",
+        "kcal": 650,
+        "protein": 30,
+        "carb": 70,
+        "fat": 25,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "6c3c7a2b-b318-438a-b2ae-8d7bd282f252",
+        "name": "Cơm xá xíu",
+        "kcal": 580,
+        "protein": 22,
+        "carb": 75,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "4c7f1663-05bb-43bf-83f5-0d193d54e296",
+        "name": "Cơm heo quay",
+        "kcal": 720,
+        "protein": 25,
+        "carb": 70,
+        "fat": 35,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "67a5fd98-422d-42af-85b7-f7b21777c0ac",
+        "name": "Cơm vịt quay",
+        "kcal": 700,
+        "protein": 28,
+        "carb": 70,
+        "fat": 32,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "af6f80e7-c0cf-42d2-b881-ac184ff43404",
+        "name": "Cơm mực xào sa tế",
+        "kcal": 550,
+        "protein": 25,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "2a35eda3-4a8e-4eb8-9b9a-990fdb7d5911",
+        "name": "Cơm tôm rim thịt",
+        "kcal": 600,
+        "protein": 26,
+        "carb": 75,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "90d5bfb7-d390-4bb4-aaa9-e6a0a527339e",
+        "name": "Cơm gà kho gừng",
+        "kcal": 560,
+        "protein": 28,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "9b96be87-0561-4dcb-8a57-f50b8c5fef08",
+        "name": "Cơm trắng",
+        "kcal": 200,
+        "protein": 4,
+        "carb": 45,
+        "fat": 0.5,
+        "unit": "1 bát"
+    },
+    {
+        "id": "e8caf978-4c04-4ea4-93e2-81a20cd06458",
+        "name": "Cơm gạo lứt",
+        "kcal": 180,
+        "protein": 5,
+        "carb": 38,
+        "fat": 1.5,
+        "unit": "1 bát"
+    },
+    {
+        "id": "0519f3a7-b042-47a9-bcff-6cbc48cc146b",
+        "name": "Cơm rang tôm thịt",
+        "kcal": 580,
+        "protein": 25,
+        "carb": 70,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "22b622a1-775b-4323-9592-f4970c9c85ea",
+        "name": "Cơm chay thập cẩm",
+        "kcal": 450,
+        "protein": 15,
+        "carb": 70,
+        "fat": 12,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "1c821303-9fb8-4dbc-ab75-e8439e7568bf",
+        "name": "Cơm hộp văn phòng (tổng hợp)",
+        "kcal": 700,
+        "protein": 30,
+        "carb": 80,
+        "fat": 25,
+        "unit": "1 phần"
+    },
+    {
+        "id": "7463b579-74d1-4a8a-82d3-ac3b686bab75",
+        "name": "Cơm lam",
+        "kcal": 250,
+        "protein": 5,
+        "carb": 55,
+        "fat": 2,
+        "unit": "1 ống"
+    },
+    {
+        "id": "ca8db38e-5149-49f7-8174-04d3411801de",
+        "name": "Phở bò tái",
+        "kcal": 450,
+        "protein": 28,
+        "carb": 65,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "484c49e7-58df-4017-b667-489be076521f",
+        "name": "Phở bò chín",
+        "kcal": 460,
+        "protein": 30,
+        "carb": 65,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "92d9edf8-37c4-47bd-94b5-a3811cd141dd",
+        "name": "Phở bò nạm",
+        "kcal": 520,
+        "protein": 28,
+        "carb": 65,
+        "fat": 20,
+        "unit": "1 bát"
+    },
+    {
+        "id": "7ecb2184-4b30-41b0-a37c-3e84cefcfa7d",
+        "name": "Phở bò tái nạm gầu",
+        "kcal": 600,
+        "protein": 30,
+        "carb": 65,
+        "fat": 25,
+        "unit": "1 bát"
+    },
+    {
+        "id": "6a7c0a9d-10f6-4872-880d-9c0a8b2b8006",
+        "name": "Phở bò viên",
+        "kcal": 480,
+        "protein": 25,
+        "carb": 65,
+        "fat": 15,
+        "unit": "1 bát"
+    },
+    {
+        "id": "8e5014ce-4d6a-4c77-8808-86e877402a30",
+        "name": "Phở gà đùi",
+        "kcal": 500,
+        "protein": 32,
+        "carb": 60,
+        "fat": 15,
+        "unit": "1 bát"
+    },
+    {
+        "id": "576fc4ae-1e6a-4ed9-981c-c2810b471a87",
+        "name": "Phở gà lườn (ức)",
+        "kcal": 420,
+        "protein": 35,
+        "carb": 60,
+        "fat": 8,
+        "unit": "1 bát"
+    },
+    {
+        "id": "90f72a46-6a5f-47e1-866d-2e5de2fd5aa1",
+        "name": "Phở xào thịt bò",
+        "kcal": 650,
+        "protein": 30,
+        "carb": 70,
+        "fat": 28,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "2e267a19-e7ee-4b2e-9fee-bfadc388a85e",
+        "name": "Phở cuốn",
+        "kcal": 350,
+        "protein": 20,
+        "carb": 45,
+        "fat": 10,
+        "unit": "1 đĩa (5 cuốn)"
+    },
+    {
+        "id": "b116cd09-2e2d-433f-9b37-f0c698c8588e",
+        "name": "Phở trộn chua ngọt",
+        "kcal": 550,
+        "protein": 25,
+        "carb": 70,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "a4905417-ba0c-449c-90d2-49eb4547a933",
+        "name": "Bún chả Hà Nội",
+        "kcal": 650,
+        "protein": 30,
+        "carb": 85,
+        "fat": 25,
+        "unit": "1 suất"
+    },
+    {
+        "id": "2af8d211-a2e9-4056-b480-2bc63426d99d",
+        "name": "Bún bò Huế (đầy đủ)",
+        "kcal": 700,
+        "protein": 35,
+        "carb": 80,
+        "fat": 28,
+        "unit": "1 bát"
+    },
+    {
+        "id": "564cd02b-c075-46b3-a606-f0f1bc9d94fa",
+        "name": "Bún bò Huế (cơ bản)",
+        "kcal": 550,
+        "protein": 28,
+        "carb": 75,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "d5182415-37b3-4e6b-bfa7-2dd3d1f48a1f",
+        "name": "Bún riêu cua bò",
+        "kcal": 520,
+        "protein": 25,
+        "carb": 65,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "84e4d27f-1505-4306-89c9-f227ad604b72",
+        "name": "Bún mọc",
+        "kcal": 480,
+        "protein": 22,
+        "carb": 65,
+        "fat": 15,
+        "unit": "1 bát"
+    },
+    {
+        "id": "33c4acb3-d042-4b9a-a3e5-4b27c8ae37c0",
+        "name": "Bún thịt nướng",
+        "kcal": 580,
+        "protein": 25,
+        "carb": 75,
+        "fat": 20,
+        "unit": "1 bát"
+    },
+    {
+        "id": "dccf8a3d-182a-4076-8d7b-73828a8dd089",
+        "name": "Bún đậu mắm tôm (đầy đủ)",
+        "kcal": 800,
+        "protein": 40,
+        "carb": 70,
+        "fat": 45,
+        "unit": "1 mẹt"
+    },
+    {
+        "id": "b84c70c7-a092-4ea3-9ec4-cf42af477880",
+        "name": "Bún hải sản",
+        "kcal": 450,
+        "protein": 30,
+        "carb": 65,
+        "fat": 10,
+        "unit": "1 bát"
+    },
+    {
+        "id": "167dfb4b-ecf0-40ac-b1c2-049e862475f5",
+        "name": "Bún cá nướng",
+        "kcal": 480,
+        "protein": 28,
+        "carb": 65,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "5651d4f8-c01b-48fc-b7dd-613c387090c5",
+        "name": "Bún chả cá",
+        "kcal": 450,
+        "protein": 25,
+        "carb": 65,
+        "fat": 10,
+        "unit": "1 bát"
+    },
+    {
+        "id": "f500490f-d69e-4fb8-8ab2-f6ee27b354da",
+        "name": "Bún ốc",
+        "kcal": 420,
+        "protein": 15,
+        "carb": 65,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "dc26e69a-10e8-45d3-b3da-52612c83949c",
+        "name": "Bún xào chay",
+        "kcal": 380,
+        "protein": 12,
+        "carb": 65,
+        "fat": 10,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "8110bf1b-324c-44e7-86b4-f1ec451780f8",
+        "name": "Miến lươn nước",
+        "kcal": 400,
+        "protein": 25,
+        "carb": 55,
+        "fat": 10,
+        "unit": "1 bát"
+    },
+    {
+        "id": "0322e5ea-e7f4-46bc-bff4-8497c7485f05",
+        "name": "Miến lươn xào",
+        "kcal": 550,
+        "protein": 28,
+        "carb": 60,
+        "fat": 22,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "d55469bb-2ef1-4520-9eab-4fba7bade658",
+        "name": "Miến gà",
+        "kcal": 420,
+        "protein": 28,
+        "carb": 55,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "f43ebf7b-e3fc-4d82-9a13-3374a58e57bf",
+        "name": "Miến măng vịt",
+        "kcal": 500,
+        "protein": 30,
+        "carb": 55,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "89502c88-6dfa-4165-a127-c683c58f2709",
+        "name": "Miến trộn Hàn Quốc",
+        "kcal": 480,
+        "protein": 15,
+        "carb": 65,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "d1b3f145-0d2c-4808-a557-feabaef7149e",
+        "name": "Miến cua xào",
+        "kcal": 600,
+        "protein": 30,
+        "carb": 60,
+        "fat": 25,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "624b3230-762d-4905-ab3e-d39633ff5f21",
+        "name": "Hủ tiếu Nam Vang nước",
+        "kcal": 550,
+        "protein": 30,
+        "carb": 70,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "49033467-ec7d-47d0-9cde-8450893ff72c",
+        "name": "Hủ tiếu Nam Vang khô",
+        "kcal": 620,
+        "protein": 30,
+        "carb": 70,
+        "fat": 25,
+        "unit": "1 bát"
+    },
+    {
+        "id": "c500b3f8-374c-41f4-b1c8-c8e79c85b3b2",
+        "name": "Hủ tiếu bò kho",
+        "kcal": 650,
+        "protein": 32,
+        "carb": 65,
+        "fat": 28,
+        "unit": "1 bát"
+    },
+    {
+        "id": "378f65a8-c798-4f44-99eb-ab036ba6c6fb",
+        "name": "Hủ tiếu gõ",
+        "kcal": 400,
+        "protein": 18,
+        "carb": 60,
+        "fat": 12,
+        "unit": "1 bát"
+    },
+    {
+        "id": "3b76470e-b07c-4dac-a455-33e581943d8e",
+        "name": "Bánh đa cua",
+        "kcal": 450,
+        "protein": 22,
+        "carb": 65,
+        "fat": 15,
+        "unit": "1 bát"
+    },
+    {
+        "id": "47e7c089-13c7-4442-9a56-ebf01be15476",
+        "name": "Mì xào giòn hải sản",
+        "kcal": 700,
+        "protein": 28,
+        "carb": 80,
+        "fat": 32,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "33f7fd2c-b55f-4427-bb7e-3401aa65c52b",
+        "name": "Mì xào bò",
+        "kcal": 650,
+        "protein": 30,
+        "carb": 75,
+        "fat": 28,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "245120eb-126f-47c0-b51f-f3b45a491946",
+        "name": "Mì Quảng",
+        "kcal": 580,
+        "protein": 30,
+        "carb": 70,
+        "fat": 20,
+        "unit": "1 bát"
+    },
+    {
+        "id": "4ed91e48-e889-489b-a0ed-3cdcf3bdc32c",
+        "name": "Cao lầu",
+        "kcal": 550,
+        "protein": 28,
+        "carb": 70,
+        "fat": 18,
+        "unit": "1 bát"
+    },
+    {
+        "id": "e55e59c8-7c8b-4673-8381-55fe086e6801",
+        "name": "Bún xào Singapore",
+        "kcal": 580,
+        "protein": 25,
+        "carb": 75,
+        "fat": 20,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "927cfb6a-3c3f-46de-be1f-c4de05686b94",
+        "name": "Bánh canh giò heo",
+        "kcal": 600,
+        "protein": 30,
+        "carb": 75,
+        "fat": 22,
+        "unit": "1 bát"
+    },
+    {
+        "id": "0b61f74b-ae71-4677-9dc8-d45ceeb9106f",
+        "name": "Bánh canh cua",
+        "kcal": 500,
+        "protein": 25,
+        "carb": 70,
+        "fat": 15,
+        "unit": "1 bát"
+    },
+    {
+        "id": "81dde105-15a2-4db4-aa4d-c4a9b3028c90",
+        "name": "Ức gà luộc",
+        "kcal": 165,
+        "protein": 31,
+        "carb": 0,
+        "fat": 3.6,
+        "unit": "100g"
+    },
+    {
+        "id": "0650765d-c607-46c1-9358-de4e5d97ed00",
+        "name": "Ức gà áp chảo",
+        "kcal": 200,
+        "protein": 31,
+        "carb": 1,
+        "fat": 7,
+        "unit": "100g"
+    },
+    {
+        "id": "f58f8d01-9520-4968-a2ad-06a66a0beee7",
+        "name": "Thịt bò xào hành tây",
+        "kcal": 250,
+        "protein": 22,
+        "carb": 8,
+        "fat": 15,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "b71e243e-de41-4c40-8937-8547bf46b1e8",
+        "name": "Bò bít tết (Steak)",
+        "kcal": 600,
+        "protein": 45,
+        "carb": 5,
+        "fat": 40,
+        "unit": "1 phần (200g bò)"
+    },
+    {
+        "id": "e7298421-80bd-4b6a-afee-01720b46e4b8",
+        "name": "Trứng luộc",
+        "kcal": 78,
+        "protein": 6,
+        "carb": 0.5,
+        "fat": 5,
+        "unit": "1 quả"
+    },
+    {
+        "id": "5e547723-3716-4ffa-9237-c9589cdae0f3",
+        "name": "Trứng ốp la",
+        "kcal": 110,
+        "protein": 6,
+        "carb": 1,
+        "fat": 9,
+        "unit": "1 quả"
+    },
+    {
+        "id": "37359eb7-cae4-4dc5-9ac6-7eb60db42fd8",
+        "name": "Trứng đúc thịt",
+        "kcal": 350,
+        "protein": 20,
+        "carb": 5,
+        "fat": 28,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "90e24568-efd1-445b-a3a8-82d9cfdc4843",
+        "name": "Cá hồi áp chảo",
+        "kcal": 450,
+        "protein": 40,
+        "carb": 0,
+        "fat": 30,
+        "unit": "1 phần (200g)"
+    },
+    {
+        "id": "a90c7189-deee-483e-a738-2e94c70ae3d9",
+        "name": "Cá ngừ đại dương sashimi",
+        "kcal": 130,
+        "protein": 28,
+        "carb": 0,
+        "fat": 1.5,
+        "unit": "100g"
+    },
+    {
+        "id": "3af588b6-e925-4124-a07b-7ca3ef0d45b8",
+        "name": "Mực hấp hành gừng",
+        "kcal": 120,
+        "protein": 20,
+        "carb": 3,
+        "fat": 2,
+        "unit": "1 đĩa (150g)"
+    },
+    {
+        "id": "a310b189-95d7-4274-b394-291f16450f5b",
+        "name": "Tôm rang thịt ba chỉ",
+        "kcal": 450,
+        "protein": 25,
+        "carb": 10,
+        "fat": 35,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "77264a03-7ff4-4fe0-97e6-ea86dd81719a",
+        "name": "Thịt heo luộc (ba chỉ)",
+        "kcal": 350,
+        "protein": 15,
+        "carb": 0,
+        "fat": 32,
+        "unit": "100g"
+    },
+    {
+        "id": "fa46850c-b135-4ab0-acfd-83c8a1b00e88",
+        "name": "Thịt nạc dăm nướng",
+        "kcal": 280,
+        "protein": 25,
+        "carb": 5,
+        "fat": 18,
+        "unit": "100g"
+    },
+    {
+        "id": "6c7ee1e5-1b09-4b3c-bed4-71d0b9a711ad",
+        "name": "Đùi gà rán (có da)",
+        "kcal": 350,
+        "protein": 20,
+        "carb": 12,
+        "fat": 25,
+        "unit": "1 cái"
+    },
+    {
+        "id": "5321ce47-7dd2-4134-a173-47ef8a12726f",
+        "name": "Đùi gà luộc (bỏ da)",
+        "kcal": 150,
+        "protein": 22,
+        "carb": 0,
+        "fat": 6,
+        "unit": "1 cái"
+    },
+    {
+        "id": "4c07f4eb-b384-4e3e-842c-c86d51fd2587",
+        "name": "Gà kiến nướng muối ớt",
+        "kcal": 450,
+        "protein": 35,
+        "carb": 5,
+        "fat": 30,
+        "unit": "1/2 con"
+    },
+    {
+        "id": "d8b66d7e-9786-40d5-b4aa-16aed0e868a1",
+        "name": "Đậu hũ dồn thịt sốt cà chua",
+        "kcal": 350,
+        "protein": 22,
+        "carb": 15,
+        "fat": 25,
+        "unit": "1 đĩa (3 miếng)"
+    },
+    {
+        "id": "c67d7273-be26-43ab-936a-6e835407eba4",
+        "name": "Đậu hũ chiên sả ớt",
+        "kcal": 250,
+        "protein": 15,
+        "carb": 10,
+        "fat": 18,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "4e5a4870-164b-4273-9543-d6733aecd71d",
+        "name": "Thịt bò luộc chấm tương",
+        "kcal": 180,
+        "protein": 25,
+        "carb": 0,
+        "fat": 8,
+        "unit": "100g"
+    },
+    {
+        "id": "d081fb46-b845-4131-aaa1-853926f1b1e5",
+        "name": "Chả lụa",
+        "kcal": 150,
+        "protein": 18,
+        "carb": 5,
+        "fat": 8,
+        "unit": "100g"
+    },
+    {
+        "id": "0128ebb5-3e9b-452d-8721-b4f6747144fe",
+        "name": "Chả quế",
+        "kcal": 180,
+        "protein": 16,
+        "carb": 8,
+        "fat": 10,
+        "unit": "100g"
+    },
+    {
+        "id": "faf7b11d-91bd-4db1-8fba-f1546a2247c8",
+        "name": "Giò bò",
+        "kcal": 170,
+        "protein": 20,
+        "carb": 5,
+        "fat": 8,
+        "unit": "100g"
+    },
+    {
+        "id": "0b468c4a-cad0-4aa3-a437-72d1d0f49c5f",
+        "name": "Xúc xích Đức nướng",
+        "kcal": 300,
+        "protein": 12,
+        "carb": 5,
+        "fat": 25,
+        "unit": "1 cây"
+    },
+    {
+        "id": "bc04e785-cd1e-4155-b2b2-060d677cdc12",
+        "name": "Thịt viên chiên",
+        "kcal": 320,
+        "protein": 15,
+        "carb": 10,
+        "fat": 25,
+        "unit": "1 xiên"
+    },
+    {
+        "id": "ed7a4d45-9c75-4b9b-b2b0-aa38f8a69de1",
+        "name": "Cá chép om dưa",
+        "kcal": 400,
+        "protein": 35,
+        "carb": 15,
+        "fat": 22,
+        "unit": "1 tô"
+    },
+    {
+        "id": "3873519c-532e-43d8-a2b2-cacf188d9cfe",
+        "name": "Cá trê kho gừng",
+        "kcal": 350,
+        "protein": 25,
+        "carb": 10,
+        "fat": 22,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "863a8b04-9092-4b9d-8a0c-1ad23f621267",
+        "name": "Cá nục kho tộ",
+        "kcal": 320,
+        "protein": 28,
+        "carb": 8,
+        "fat": 18,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "436f8031-352f-4849-b658-f49939d61853",
+        "name": "Cá basa kho tộ",
+        "kcal": 420,
+        "protein": 22,
+        "carb": 10,
+        "fat": 32,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "a0f6c2f4-de5b-42f6-a677-0031829de2fc",
+        "name": "Sườn non nướng",
+        "kcal": 380,
+        "protein": 20,
+        "carb": 10,
+        "fat": 28,
+        "unit": "100g"
+    },
+    {
+        "id": "111b92c6-a1b9-4225-833e-36672af7d769",
+        "name": "Sườn chua ngọt",
+        "kcal": 450,
+        "protein": 18,
+        "carb": 25,
+        "fat": 30,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "af735b46-e9cc-469c-9ac2-3524b3a1eb77",
+        "name": "Lòng lợn luộc",
+        "kcal": 250,
+        "protein": 18,
+        "carb": 2,
+        "fat": 18,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "3e11f58b-c732-4bb8-be65-5e2869b09b81",
+        "name": "Tim cật xào giá",
+        "kcal": 280,
+        "protein": 25,
+        "carb": 10,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "bc6e133c-2b2e-4188-a7cb-2358b11666ad",
+        "name": "Thịt ếch xào xả ớt",
+        "kcal": 200,
+        "protein": 22,
+        "carb": 5,
+        "fat": 10,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "a6f26864-7868-4172-8fd5-0c9824e24914",
+        "name": "Lươn xào sả ớt",
+        "kcal": 250,
+        "protein": 25,
+        "carb": 8,
+        "fat": 12,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "90830828-1df7-445f-8d77-a440e8db315f",
+        "name": "Ngan cháy tỏi",
+        "kcal": 550,
+        "protein": 35,
+        "carb": 10,
+        "fat": 40,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "ff049ee9-4666-4896-910e-5ee1fc77c441",
+        "name": "Vịt quay Bắc Kinh",
+        "kcal": 450,
+        "protein": 25,
+        "carb": 10,
+        "fat": 35,
+        "unit": "100g"
+    },
+    {
+        "id": "01e08407-ef05-4e1e-ace7-066a9897dccd",
+        "name": "Bò lúc lắc",
+        "kcal": 350,
+        "protein": 28,
+        "carb": 12,
+        "fat": 22,
+        "unit": "1 phần"
+    },
+    {
+        "id": "fccb638d-d6e2-466e-8b44-5bb26bbcdde5",
+        "name": "Tôm nướng sa tế",
+        "kcal": 200,
+        "protein": 28,
+        "carb": 5,
+        "fat": 8,
+        "unit": "1 đĩa (10 con)"
+    },
+    {
+        "id": "cfb9c63c-7c8b-4e1a-9065-97326167d562",
+        "name": "Cua biển hấp",
+        "kcal": 150,
+        "protein": 25,
+        "carb": 0,
+        "fat": 5,
+        "unit": "1 con (300g)"
+    },
+    {
+        "id": "aa926ed1-fbd7-45c4-bc0b-10b1e86371f7",
+        "name": "Ghẹ hấp xả",
+        "kcal": 120,
+        "protein": 22,
+        "carb": 0,
+        "fat": 3,
+        "unit": "1 con (250g)"
+    },
+    {
+        "id": "7653e2c2-7291-40e6-ac31-e392996b74a0",
+        "name": "Bánh mì xíu mại",
+        "kcal": 450,
+        "protein": 20,
+        "carb": 60,
+        "fat": 15,
+        "unit": "1 ổ"
+    },
+    {
+        "id": "2685a5c9-45ad-4115-b490-ce24b8e7a012",
+        "name": "Bánh mì thịt chả",
+        "kcal": 500,
+        "protein": 22,
+        "carb": 60,
+        "fat": 20,
+        "unit": "1 ổ"
+    },
+    {
+        "id": "0a800551-60c5-42eb-ae1d-496d31ae8bdc",
+        "name": "Bánh mì heo quay",
+        "kcal": 550,
+        "protein": 20,
+        "carb": 55,
+        "fat": 28,
+        "unit": "1 ổ"
+    },
+    {
+        "id": "718f809a-6427-484c-bc68-97b27eeb985c",
+        "name": "Bánh mì trứng ốp la",
+        "kcal": 380,
+        "protein": 15,
+        "carb": 50,
+        "fat": 15,
+        "unit": "1 ổ"
+    },
+    {
+        "id": "e32c97d8-2da5-4290-9623-c04a70daa199",
+        "name": "Bánh mì pate xúc xích",
+        "kcal": 520,
+        "protein": 18,
+        "carb": 55,
+        "fat": 25,
+        "unit": "1 ổ"
+    },
+    {
+        "id": "2ea94ba3-e0c1-48f7-970e-802857e681de",
+        "name": "Bánh mì chảo (đầy đủ)",
+        "kcal": 700,
+        "protein": 30,
+        "carb": 65,
+        "fat": 35,
+        "unit": "1 phần"
+    },
+    {
+        "id": "dc3021a5-1355-46cd-a2d8-c22309146624",
+        "name": "Bánh bao nhân thịt trứng cút",
+        "kcal": 350,
+        "protein": 12,
+        "carb": 45,
+        "fat": 15,
+        "unit": "1 cái"
+    },
+    {
+        "id": "c8edecbf-9e7e-4bd9-a27a-4616be9e00bf",
+        "name": "Bánh bao chay",
+        "kcal": 180,
+        "protein": 5,
+        "carb": 35,
+        "fat": 2,
+        "unit": "1 cái"
+    },
+    {
+        "id": "a371deb9-d07c-4a04-9336-33c4c20f383b",
+        "name": "Bánh bao kim sa",
+        "kcal": 320,
+        "protein": 8,
+        "carb": 40,
+        "fat": 15,
+        "unit": "1 cái"
+    },
+    {
+        "id": "be4328b8-3850-4285-a5de-9aa77d128bf3",
+        "name": "Bánh xèo",
+        "kcal": 450,
+        "protein": 15,
+        "carb": 45,
+        "fat": 25,
+        "unit": "1 cái"
+    },
+    {
+        "id": "0d1cacdc-7b7c-4f1a-a350-310bf7ba2089",
+        "name": "Bánh khọt",
+        "kcal": 400,
+        "protein": 12,
+        "carb": 45,
+        "fat": 20,
+        "unit": "1 đĩa (5 cái)"
+    },
+    {
+        "id": "147d53e2-3be4-45dc-9bc3-cc35a6c2bb26",
+        "name": "Bánh cuốn nhân thịt",
+        "kcal": 380,
+        "protein": 12,
+        "carb": 50,
+        "fat": 15,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "d7d4d9f6-97b8-4e6d-9af7-e5a1b4abdb9f",
+        "name": "Bánh ướt chả lụa",
+        "kcal": 350,
+        "protein": 15,
+        "carb": 55,
+        "fat": 10,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "b22e6c82-1148-4cfd-878a-d800e9ca6139",
+        "name": "Bánh bột lọc",
+        "kcal": 300,
+        "protein": 8,
+        "carb": 55,
+        "fat": 8,
+        "unit": "1 đĩa (10 cái)"
+    },
+    {
+        "id": "e0fc8fea-b35f-4671-a379-cc3ddcd13e04",
+        "name": "Bánh nậm",
+        "kcal": 250,
+        "protein": 6,
+        "carb": 45,
+        "fat": 5,
+        "unit": "1 đĩa (5 cái)"
+    },
+    {
+        "id": "74ad6381-36a5-4801-8859-167efe3658ca",
+        "name": "Bánh bèo",
+        "kcal": 280,
+        "protein": 8,
+        "carb": 55,
+        "fat": 5,
+        "unit": "1 đĩa (10 chén)"
+    },
+    {
+        "id": "62c4c78f-e27b-4d0b-bd46-4f8f921fb8e4",
+        "name": "Bánh giò",
+        "kcal": 350,
+        "protein": 12,
+        "carb": 40,
+        "fat": 18,
+        "unit": "1 cái"
+    },
+    {
+        "id": "49cb94e3-4ed5-4141-9ace-04ed2a508c11",
+        "name": "Bánh chưng",
+        "kcal": 600,
+        "protein": 18,
+        "carb": 80,
+        "fat": 25,
+        "unit": "1 góc (1/8 cái)"
+    },
+    {
+        "id": "57a0e9d5-545b-4fe8-b650-1a60e07ff32e",
+        "name": "Bánh tét",
+        "kcal": 580,
+        "protein": 15,
+        "carb": 85,
+        "fat": 22,
+        "unit": "1 khoanh"
+    },
+    {
+        "id": "18bfda8f-d985-41c7-9a14-4caee214c262",
+        "name": "Gỏi cuốn",
+        "kcal": 150,
+        "protein": 10,
+        "carb": 20,
+        "fat": 3,
+        "unit": "1 cuốn"
+    },
+    {
+        "id": "cdf21120-7e2b-4437-973f-6f94f26f4104",
+        "name": "Chả giò chiên (Nem rán)",
+        "kcal": 220,
+        "protein": 8,
+        "carb": 15,
+        "fat": 15,
+        "unit": "1 cuốn"
+    },
+    {
+        "id": "2af8f29f-2b80-48c2-bb7c-78941a53f314",
+        "name": "Bò lá lốt",
+        "kcal": 350,
+        "protein": 18,
+        "carb": 10,
+        "fat": 25,
+        "unit": "1 đĩa (5 cuốn)"
+    },
+    {
+        "id": "8620e8ab-bead-46e4-af57-f2ba2d8cd05e",
+        "name": "Há cảo hấp",
+        "kcal": 200,
+        "protein": 10,
+        "carb": 30,
+        "fat": 5,
+        "unit": "1 đĩa (5 cái)"
+    },
+    {
+        "id": "1f7d6246-b08d-49f3-9d5c-5afd6b175a14",
+        "name": "Xíu mại hấp",
+        "kcal": 250,
+        "protein": 15,
+        "carb": 15,
+        "fat": 15,
+        "unit": "1 đĩa (3 viên)"
+    },
+    {
+        "id": "1481fe92-ed76-47db-bf4a-05f66db94a2a",
+        "name": "Bánh tráng trộn",
+        "kcal": 350,
+        "protein": 10,
+        "carb": 50,
+        "fat": 12,
+        "unit": "1 bịch"
+    },
+    {
+        "id": "0a630b30-464b-4908-9499-077775ff5f3b",
+        "name": "Bánh tráng nướng",
+        "kcal": 320,
+        "protein": 12,
+        "carb": 40,
+        "fat": 15,
+        "unit": "1 cái"
+    },
+    {
+        "id": "0178e352-a322-4011-a01a-06beee839681",
+        "name": "Bắp xào bơ",
+        "kcal": 380,
+        "protein": 5,
+        "carb": 55,
+        "fat": 18,
+        "unit": "1 hộp"
+    },
+    {
+        "id": "adee54ed-f62e-4315-b74e-a2e2fd74be6c",
+        "name": "Khoai lang nướng",
+        "kcal": 180,
+        "protein": 3,
+        "carb": 40,
+        "fat": 0.5,
+        "unit": "1 củ (200g)"
+    },
+    {
+        "id": "50f409db-5333-4f09-93bd-96f1611973da",
+        "name": "Khoai tây chiên",
+        "kcal": 312,
+        "protein": 3,
+        "carb": 41,
+        "fat": 15,
+        "unit": "1 phần (100g)"
+    },
+    {
+        "id": "f141ed51-c195-4d98-94b5-4d13c2d4f291",
+        "name": "Xúc xích chiên",
+        "kcal": 250,
+        "protein": 10,
+        "carb": 5,
+        "fat": 22,
+        "unit": "1 cây"
+    },
+    {
+        "id": "f00364f8-3723-4fb5-b696-6cd05e30e418",
+        "name": "Hạt dẻ rang",
+        "kcal": 250,
+        "protein": 5,
+        "carb": 45,
+        "fat": 5,
+        "unit": "100g"
+    },
+    {
+        "id": "262349dd-8dac-4e55-bcbe-00165b4dfddd",
+        "name": "Đậu phộng rang tỏi ớt",
+        "kcal": 580,
+        "protein": 25,
+        "carb": 20,
+        "fat": 50,
+        "unit": "100g"
+    },
+    {
+        "id": "958d6ce0-bfa6-48c2-9902-83116eb6056a",
+        "name": "Hạt điều rang muối",
+        "kcal": 600,
+        "protein": 18,
+        "carb": 30,
+        "fat": 48,
+        "unit": "100g"
+    },
+    {
+        "id": "ae9f177d-a12c-41e1-8922-91f09df0e251",
+        "name": "Bánh quy bơ",
+        "kcal": 450,
+        "protein": 5,
+        "carb": 65,
+        "fat": 20,
+        "unit": "100g"
+    },
+    {
+        "id": "9b839a38-6009-4fa7-a68f-82001966b353",
+        "name": "Bánh trung thu thập cẩm",
+        "kcal": 800,
+        "protein": 15,
+        "carb": 90,
+        "fat": 45,
+        "unit": "1 cái (150g)"
+    },
+    {
+        "id": "68fa8c6f-ebc0-4163-a374-45910efe5930",
+        "name": "Sữa bò tươi nguyên kem",
+        "kcal": 150,
+        "protein": 8,
+        "carb": 12,
+        "fat": 8,
+        "unit": "1 ly (250ml)"
+    },
+    {
+        "id": "9f883538-e29d-43c6-b712-6af9a4536ff4",
+        "name": "Sữa đặc có đường",
+        "kcal": 320,
+        "protein": 8,
+        "carb": 55,
+        "fat": 8,
+        "unit": "100g"
+    },
+    {
+        "id": "50341d34-828f-47c1-b790-21e6489312c1",
+        "name": "Sữa chua có đường",
+        "kcal": 100,
+        "protein": 3,
+        "carb": 15,
+        "fat": 3,
+        "unit": "1 hộp (100g)"
+    },
+    {
+        "id": "ffcb6363-6fc1-49df-bdcd-d003e983ef36",
+        "name": "Sữa đậu nành",
+        "kcal": 110,
+        "protein": 8,
+        "carb": 10,
+        "fat": 4,
+        "unit": "1 ly (250ml)"
+    },
+    {
+        "id": "520d5160-7575-40ab-93f2-df0d3b7d264e",
+        "name": "Sữa hạt macca",
+        "kcal": 180,
+        "protein": 2,
+        "carb": 10,
+        "fat": 15,
+        "unit": "1 ly (250ml)"
+    },
+    {
+        "id": "35035507-395e-4fd9-9629-59ca6d8c874d",
+        "name": "Sữa bí đỏ",
+        "kcal": 200,
+        "protein": 4,
+        "carb": 30,
+        "fat": 8,
+        "unit": "1 ly (250ml)"
+    },
+    {
+        "id": "e293fca5-bdb9-4f53-acf8-58f191484b5f",
+        "name": "Sinh tố bơ",
+        "kcal": 350,
+        "protein": 4,
+        "carb": 35,
+        "fat": 25,
+        "unit": "1 ly"
+    },
+    {
+        "id": "3c4e708e-2807-4035-9f08-1b838ef97b13",
+        "name": "Sinh tố chuối",
+        "kcal": 250,
+        "protein": 4,
+        "carb": 55,
+        "fat": 5,
+        "unit": "1 ly"
+    },
+    {
+        "id": "51985093-be3b-4bdb-9d10-576757249e8e",
+        "name": "Sinh tố xoài",
+        "kcal": 220,
+        "protein": 3,
+        "carb": 50,
+        "fat": 2,
+        "unit": "1 ly"
+    },
+    {
+        "id": "cd83c8ea-f812-4129-956a-75c472438149",
+        "name": "Sinh tố sầu riêng",
+        "kcal": 450,
+        "protein": 5,
+        "carb": 60,
+        "fat": 22,
+        "unit": "1 ly"
+    },
+    {
+        "id": "dd7e4751-d148-4ab0-b34a-814e7d37cadc",
+        "name": "Sinh tố dâu tây",
+        "kcal": 180,
+        "protein": 2,
+        "carb": 40,
+        "fat": 2,
+        "unit": "1 ly"
+    },
+    {
+        "id": "173e85ae-cb90-4fb7-9889-7e99e1009b3d",
+        "name": "Nước mía",
+        "kcal": 150,
+        "protein": 0,
+        "carb": 38,
+        "fat": 0,
+        "unit": "1 ly (300ml)"
+    },
+    {
+        "id": "b211b973-9f05-4b28-bcce-6891caa2b4c0",
+        "name": "Trà sữa trân châu đường đen",
+        "kcal": 450,
+        "protein": 5,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 ly (500ml)"
+    },
+    {
+        "id": "e4ed3af9-37b6-4afa-866b-0e1b3f98b07d",
+        "name": "Trà đào cam sả",
+        "kcal": 180,
+        "protein": 0,
+        "carb": 45,
+        "fat": 0,
+        "unit": "1 ly (500ml)"
+    },
+    {
+        "id": "6a4c25ff-fb39-4c37-84a5-2b617b085f28",
+        "name": "Nước ép cam",
+        "kcal": 120,
+        "protein": 2,
+        "carb": 28,
+        "fat": 0.5,
+        "unit": "1 ly (250ml)"
+    },
+    {
+        "id": "e1f7dbff-5e3f-40f6-9bdb-8a9ca9bcb79b",
+        "name": "Nước dừa tươi",
+        "kcal": 45,
+        "protein": 1,
+        "carb": 10,
+        "fat": 0,
+        "unit": "1 quả"
+    },
+    {
+        "id": "e78b5511-69e4-421e-b760-7a03c326a4c9",
+        "name": "Bạc xỉu",
+        "kcal": 250,
+        "protein": 4,
+        "carb": 40,
+        "fat": 8,
+        "unit": "1 ly"
+    },
+    {
+        "id": "0200cf02-5179-4262-8aa8-76436e472ae0",
+        "name": "Cà phê sữa đá",
+        "kcal": 200,
+        "protein": 3,
+        "carb": 35,
+        "fat": 5,
+        "unit": "1 ly"
+    },
+    {
+        "id": "3027c33b-2d32-442d-b12c-c7bd3c5c006b",
+        "name": "Chuối sáp luộc",
+        "kcal": 120,
+        "protein": 1,
+        "carb": 30,
+        "fat": 0.5,
+        "unit": "1 quả"
+    },
+    {
+        "id": "c2d2a97a-d6bf-44bb-95a5-1ce1c98c93ef",
+        "name": "Chuối sứ (chuối tây)",
+        "kcal": 90,
+        "protein": 1,
+        "carb": 23,
+        "fat": 0.3,
+        "unit": "1 quả"
+    },
+    {
+        "id": "13fcba97-687a-44d8-af44-105a319cb0a1",
+        "name": "Bơ sáp",
+        "kcal": 320,
+        "protein": 4,
+        "carb": 17,
+        "fat": 30,
+        "unit": "1 quả (200g)"
+    },
+    {
+        "id": "cb46930d-a4be-4679-8806-f0eddccc9001",
+        "name": "Xoài chín",
+        "kcal": 130,
+        "protein": 1,
+        "carb": 32,
+        "fat": 0.5,
+        "unit": "1 quả (200g)"
+    },
+    {
+        "id": "ada15660-b081-4037-b5a8-df43282ce6d6",
+        "name": "Sầu riêng",
+        "kcal": 300,
+        "protein": 4,
+        "carb": 55,
+        "fat": 10,
+        "unit": "2 múi (200g)"
+    },
+    {
+        "id": "64ddca0d-7872-4acd-8472-aac9adcef3ba",
+        "name": "Mít chín",
+        "kcal": 190,
+        "protein": 3,
+        "carb": 45,
+        "fat": 1,
+        "unit": "200g"
+    },
+    {
+        "id": "f67c5e8d-b61d-4969-8d95-5e3b8aad300e",
+        "name": "Thanh long",
+        "kcal": 120,
+        "protein": 2,
+        "carb": 25,
+        "fat": 0.5,
+        "unit": "1 quả (200g)"
+    },
+    {
+        "id": "0ba04dfd-05e0-4fd7-ba97-fecc8d121cd5",
+        "name": "Dưa hấu",
+        "kcal": 60,
+        "protein": 1,
+        "carb": 15,
+        "fat": 0,
+        "unit": "1 miếng to (200g)"
+    },
+    {
+        "id": "c7a54b87-9561-40cb-a152-c991ae9f179c",
+        "name": "Nho",
+        "kcal": 140,
+        "protein": 1,
+        "carb": 35,
+        "fat": 0.5,
+        "unit": "200g"
+    },
+    {
+        "id": "eff27b28-15d3-410c-ba75-73cac07b8316",
+        "name": "Táo",
+        "kcal": 95,
+        "protein": 0.5,
+        "carb": 25,
+        "fat": 0.3,
+        "unit": "1 quả"
+    },
+    {
+        "id": "2e2b2dc4-74b3-4fc4-92a2-5b7c0c481c05",
+        "name": "Cam",
+        "kcal": 60,
+        "protein": 1,
+        "carb": 15,
+        "fat": 0,
+        "unit": "1 quả"
+    },
+    {
+        "id": "d269c8da-d672-40df-8cf8-cd6199b9b06c",
+        "name": "Đu đủ chín",
+        "kcal": 80,
+        "protein": 1,
+        "carb": 20,
+        "fat": 0.5,
+        "unit": "200g"
+    },
+    {
+        "id": "d4f1cde9-07c3-4898-a9c5-0188a325d6b4",
+        "name": "Trái dừa nước",
+        "kcal": 100,
+        "protein": 1,
+        "carb": 25,
+        "fat": 0.5,
+        "unit": "1 ly"
+    },
+    {
+        "id": "19d65f7f-8190-4812-8377-870168416e0b",
+        "name": "Chè đậu đen",
+        "kcal": 350,
+        "protein": 8,
+        "carb": 70,
+        "fat": 5,
+        "unit": "1 ly"
+    },
+    {
+        "id": "985a00d0-eb4c-47ac-b012-170ddb8c513c",
+        "name": "Chè Thái",
+        "kcal": 450,
+        "protein": 5,
+        "carb": 75,
+        "fat": 15,
+        "unit": "1 ly"
+    },
+    {
+        "id": "b38427c5-5408-4959-a996-4ac38f685e58",
+        "name": "Chè bưởi",
+        "kcal": 400,
+        "protein": 2,
+        "carb": 75,
+        "fat": 12,
+        "unit": "1 ly"
+    },
+    {
+        "id": "9d524746-535a-44eb-82c7-066dbfad2aa9",
+        "name": "Chè trôi nước",
+        "kcal": 420,
+        "protein": 5,
+        "carb": 70,
+        "fat": 12,
+        "unit": "1 chén (2 viên)"
+    },
+    {
+        "id": "bulk_1",
+        "name": "Yến mạch (Oats) trộn sữa tươi",
+        "kcal": 350,
+        "protein": 14,
+        "carb": 60,
+        "fat": 7,
+        "unit": "1 bát"
+    },
+    {
+        "id": "bulk_2",
+        "name": "Cơm gạo lứt thịt nạc",
+        "kcal": 420,
+        "protein": 30,
+        "carb": 55,
+        "fat": 8,
+        "unit": "1 đĩa"
+    },
+    {
+        "id": "bulk_3",
+        "name": "Thịt bò xào đậu cô ve",
+        "kcal": 380,
+        "protein": 28,
+        "carb": 15,
+        "fat": 20,
+        "unit": "1 đĩa nhỏ"
+    },
+    {
+        "id": "bulk_4",
+        "name": "Sinh tố bơ yến mạch Protein",
+        "kcal": 450,
+        "protein": 18,
+        "carb": 45,
+        "fat": 22,
+        "unit": "1 ly"
+    }
+]
