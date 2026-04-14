@@ -30,12 +30,12 @@ export default function HomeScreen() {
 
   React.useEffect(() => {
     let dailyMealsData = currentSchedule.length > 0 ? currentSchedule : [
-      { id: 1, time: '07:00', type: 'meal', title: 'Bữa sáng', sub: 'Phở bò béo', icon: 'bowl-mix', kcal: 450 },
-      { id: 2, time: '10:00', type: 'meal', title: 'Bữa phụ sáng', sub: 'Sữa tươi + Bánh giò', icon: 'cup-water', kcal: 300 },
-      { id: 3, time: '12:30', type: 'meal', title: 'Bữa trưa', sub: 'Cơm sườn nướng', icon: 'food-drumstick', kcal: 600 },
-      { id: 4, time: '15:30', type: 'meal', title: 'Bữa phụ chiều', sub: 'Sinh tố bơ', icon: 'blender', kcal: 350 },
-      { id: 5, time: '18:30', type: 'meal', title: 'Bữa tối', sub: 'Cơm ba chỉ quay', icon: 'food-turkey', kcal: 600 },
-      { id: 6, time: '21:30', type: 'meal', title: 'Bữa phụ tối', sub: 'Sữa ông thọ pha ấm', icon: 'glass-mug', kcal: 200 }
+      { id: 1, time: '07:00', type: 'meal', title: 'Bữa sáng', sub: 'Phở bò béo', icon: 'bowl-mix', kcal: 450, protein: 25, carb: 55, fat: 12 },
+      { id: 2, time: '10:00', type: 'meal', title: 'Bữa phụ sáng', sub: 'Sữa tươi + Bánh giò', icon: 'cup-water', kcal: 300, protein: 10, carb: 35, fat: 12 },
+      { id: 3, time: '12:30', type: 'meal', title: 'Bữa trưa', sub: 'Cơm sườn nướng', icon: 'food-drumstick', kcal: 600, protein: 35, carb: 65, fat: 18 },
+      { id: 4, time: '15:30', type: 'meal', title: 'Bữa phụ chiều', sub: 'Sinh tố bơ', icon: 'blender', kcal: 350, protein: 8, carb: 30, fat: 20 },
+      { id: 5, time: '18:30', type: 'meal', title: 'Bữa tối', sub: 'Cơm ba chỉ quay', icon: 'food-turkey', kcal: 600, protein: 30, carb: 60, fat: 22 },
+      { id: 6, time: '21:30', type: 'meal', title: 'Bữa phụ tối', sub: 'Sữa ông thọ pha ấm', icon: 'glass-mug', kcal: 200, protein: 6, carb: 30, fat: 5 }
     ];
 
     let baseKcal = dailyMealsData
@@ -96,7 +96,7 @@ export default function HomeScreen() {
        });
        return;
     }
-    toggleMeal(item.id);
+    toggleMeal(item.id, item.protein || 0, item.carb || 0, item.fat || 0);
   };
 
   // Tách UpNext và Các lịch trình khác

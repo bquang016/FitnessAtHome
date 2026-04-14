@@ -62,7 +62,7 @@ interface AppState {
 
   // Actions
   initializeForDay: (dateStr: string) => Promise<void>;
-  toggleMeal: (mealId: number) => void;
+  toggleMeal: (mealId: number, protein?: number, carb?: number, fat?: number) => void;
   addExtraKcal: (kcal: number, protein?: number, carb?: number, fat?: number) => void;
   setWaterConsumed: (ml: number) => void;
   setWorkoutDone: (done: boolean) => void;
@@ -145,14 +145,20 @@ export const useAppStore = create<AppState>((set, get) => ({
     LogService.saveProfile(profile);
   },
 
-  toggleMeal: (mealId: number) => {
-    const { completedMeals, currentDate } = get();
-    const newMeals = completedMeals.includes(mealId)
+  toggleMeal: (mealId: number, protein: number = 0, carb: number = 0, fat: number = 0) => {
+    const { completedMeals, currentDate, currentProtein, currentCarb, currentFat } = get();
+    const isRemoving = completedMeals.includes(mealId);
+    const newMeals = isRemoving
       ? completedMeals.filter(id => id !== mealId)
       : [...completedMeals, mealId];
     
-    set({ completedMeals: newMeals });
-    LogService.saveDailyLog(currentDate, { completedMeals: newMeals });
+    // Add macros when checking, subtract when unchecking
+    const newP = isRemoving ? Math.max(0, currentProtein - protein) : currentProtein + protein;
+    const newC = isRemoving ? Math.max(0, currentCarb - carb) : currentCarb + carb;
+    const newF = isRemoving ? Math.max(0, currentFat - fat) : currentFat + fat;
+    
+    set({ completedMeals: newMeals, currentProtein: newP, currentCarb: newC, currentFat: newF });
+    LogService.saveDailyLog(currentDate, { completedMeals: newMeals, currentProtein: newP, currentCarb: newC, currentFat: newF });
   },
 
   addExtraKcal: (kcal: number, protein: number = 0, carb: number = 0, fat: number = 0) => {

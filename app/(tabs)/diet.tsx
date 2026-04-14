@@ -8,12 +8,12 @@ import CalorieLookupModal from '../../components/CalorieLookupModal';
 import TomorrowMenuModal from '../../components/TomorrowMenuModal';
 
 const dailyMeals = [
-  { id: 1, time: '07:00', type: 'Bữa sáng', name: 'Phở bò béo', kcal: 450, icon: 'bowl-mix' as const },
-  { id: 2, time: '10:00', type: 'Bữa phụ sáng', name: 'Sữa tươi + Bánh giò', kcal: 300, icon: 'cup-water' as const },
-  { id: 3, time: '12:30', type: 'Bữa trưa', name: 'Cơm sườn nướng', kcal: 600, icon: 'food-drumstick' as const },
-  { id: 4, time: '15:30', type: 'Bữa phụ chiều', name: 'Sinh tố bơ', kcal: 350, icon: 'blender' as const },
-  { id: 5, time: '18:30', type: 'Bữa tối', name: 'Cơm ba chỉ quay + Canh xương', kcal: 600, icon: 'food-turkey' as const },
-  { id: 6, time: '21:30', type: 'Bữa phụ tối', name: 'Sữa ông thọ pha ấm', kcal: 200, icon: 'glass-mug' as const },
+  { id: 1, time: '07:00', type: 'Bữa sáng', name: 'Phở bò béo', kcal: 450, icon: 'bowl-mix' as const, protein: 25, carb: 55, fat: 12 },
+  { id: 2, time: '10:00', type: 'Bữa phụ sáng', name: 'Sữa tươi + Bánh giò', kcal: 300, icon: 'cup-water' as const, protein: 10, carb: 35, fat: 12 },
+  { id: 3, time: '12:30', type: 'Bữa trưa', name: 'Cơm sườn nướng', kcal: 600, icon: 'food-drumstick' as const, protein: 35, carb: 65, fat: 18 },
+  { id: 4, time: '15:30', type: 'Bữa phụ chiều', name: 'Sinh tố bơ', kcal: 350, icon: 'blender' as const, protein: 8, carb: 30, fat: 20 },
+  { id: 5, time: '18:30', type: 'Bữa tối', name: 'Cơm ba chỉ quay + Canh xương', kcal: 600, icon: 'food-turkey' as const, protein: 30, carb: 60, fat: 22 },
+  { id: 6, time: '21:30', type: 'Bữa phụ tối', name: 'Sữa ông thọ pha ấm', kcal: 200, icon: 'glass-mug' as const, protein: 6, carb: 30, fat: 5 },
 ];
 
 export default function DietScreen() {
@@ -22,8 +22,8 @@ export default function DietScreen() {
   const [isLookupVisible, setIsLookupVisible] = useState(false);
   const [isTomorrowVisible, setIsTomorrowVisible] = useState(false);
 
-  const handleAddExtraFood = (kcal: number) => {
-    addExtraKcal(kcal);
+  const handleAddExtraFood = (kcal: number, item?: any) => {
+    addExtraKcal(kcal, item?.protein || 0, item?.carb || 0, item?.fat || 0);
   };
 
 
@@ -75,7 +75,7 @@ export default function DietScreen() {
             <TouchableOpacity 
               key={meal.id} 
               style={[styles.mealCard, isCompleted && styles.mealCardCompleted]}
-              onPress={() => toggleMeal(meal.id)}
+              onPress={() => toggleMeal(meal.id, meal.protein, meal.carb, meal.fat)}
               activeOpacity={0.7}
             >
               <View style={[styles.iconBox, isCompleted ? styles.iconBoxCompleted : undefined]}>
